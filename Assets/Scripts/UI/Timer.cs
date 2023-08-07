@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -43,8 +44,10 @@ namespace UI
                 _currentTimerValue -= Time.deltaTime;
                 _timerValue.text = ((int)_currentTimerValue).ToString();
             }
-            // else
-            //     this.ResetTimer();
+            else
+            {
+                SceneManager.LoadScene("SampleScene");
+            }
         }
         
         public void ResetTimer() => _currentTimerValue = _resetTimerValue;
