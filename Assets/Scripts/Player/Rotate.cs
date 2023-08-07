@@ -9,5 +9,9 @@ namespace Player
 
         private void Update() =>
             transform.RotateAround(_target.position, new Vector3(0f, 0f, 1), _rotationSpeed * Time.deltaTime);
+
+        public float GetRotationSpeed() => _rotationSpeed;
+        
+        public float SetRotationSpeed(float rotationSpeed) => _rotationSpeed = rotationSpeed;
     }
 }
